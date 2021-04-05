@@ -3,4 +3,5 @@ FROM ubuntu:14.04
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y -q python-all python-pip
 RUN pip install -qr requirements.txt
 ADD .* /opt/webapp
+EXPOSE 5000
 CMD app.py
